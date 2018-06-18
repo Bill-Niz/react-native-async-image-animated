@@ -1,3 +1,3 @@
-import AsyncImageAnimated from './lib/AsyncImageAnimated'
+import AsyncImageAnimated from './src/AsyncImageAnimated'
 
 export default AsyncImageAnimated
