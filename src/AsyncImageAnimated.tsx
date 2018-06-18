@@ -29,6 +29,7 @@ interface Props {
   placeholderSource?: ImageSource,
   source: NetworkImage,
   style: ViewStyle,
+  resizeMode: string
 }
 
 interface State {
@@ -90,6 +91,7 @@ export default class AsyncImageAnimated extends Component<Props, State> {
       placeholderSource,
       source,
       style,
+      resizeMode
     } = this.props
 
     const {
@@ -115,7 +117,7 @@ export default class AsyncImageAnimated extends Component<Props, State> {
               {
                 opacity: imageOpacity,
                 position: 'absolute',
-                resizeMode: 'contain',
+                resizeMode: resizeMode,
               },
             ]}
             onLoad={this.onLoad}
@@ -130,7 +132,7 @@ export default class AsyncImageAnimated extends Component<Props, State> {
               {
                 opacity: placeholderOpacity,
                 position: 'absolute',
-                resizeMode: 'contain',
+                resizeMode: resizeMode,
               },
             ]} />
         }
